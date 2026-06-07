@@ -1,0 +1,77 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+}
+.icono{
+    width:120px;
+    height:120px;
+    object-fit: cover;
+}
+header{
+justify-content: space-between;
+display: flex;
+align-items: center;
+width: 100%;
+padding: 10px 20px;
+background-color: #F8FAFC;
+box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+
+}
+.izquierda{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.derecha{
+    display: flex;
+    align-items: center;
+}
+button i{
+    font-size: 24px;
+    color: #F8FAFC;
+    margin-right: 10px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+}
+button{
+    background-color:#16A34A ;
+    width: 170px;
+    color: #F8FAFC;
+    height: 70px;
+    align-items: center;
+}
+.formulario{
+    width: 700px;
+    margin: 50px auto;
+    background-color: #F8FAFC;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    font-weight: 900;
+    font-size: 25px;
+    align-content: center;
+    text-align: center;
+}
+.tex2{
+    color:#656870 ;
+}
+#icon2{
+align-items: center;
+}
+.campo{
+    margin-bottom: 40px;
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+input{
+    width: 450px;
+    height: 75px;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: #15803d;
+    cursor: pointer;
+    scale: 1.2;
+    transition: 0.3;
+}
