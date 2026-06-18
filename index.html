@@ -1,73 +1,70 @@
+html
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Registrar vehículo</title>
-    <link rel="stylesheet" href="/style_registrovehi.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Confirmación de Registro</title>
 </head>
 <body>
 
-    <h1>Registrar vehículo</h1>
+  <div class="card">
+    <h1>Confirmación de Registro</h1>
+    <p class="subtitulo">Sistema interactivo para usuario nuevo, verificación, seguridad y redirección</p>
 
-    <div class="contenedor">
+    <div class="grid">
+      <div class="box">
+        <h2>Registro</h2>
+        <p>El usuario nuevo realiza su registro en el sistema y queda pendiente de confirmación.</p>
+      </div>
 
-        <p>Completa la información de tu vehículo</p>
-        <hr>
-
-        <div class="fila">
-            <div class="grupo">
-                <label>Marca *</label>
-                <select>
-                    <option>Selecciona una marca</option>
-                    <option>Toyota</option>
-                    <option>Chevrolet</option>
-                    <option>Mazda</option>
-                </select>
-            </div>
-
-            <div class="grupo">
-                <label>Modelo *</label>
-                <input type="text" placeholder="Ej: Corolla">
-            </div>
-        </div>
-
-        <div class="fila">
-            <div class="grupo">
-                <label>Año *</label>
-                <input type="number" placeholder="2020">
-            </div>
-
-            <div class="grupo">
-                <label>Placa *</label>
-                <input type="text" placeholder="ABC123">
-            </div>
-        </div>
-
-        <div class="fila">
-            <div class="grupo">
-                <label>Color *</label>
-                <input type="text" placeholder="Blanco">
-            </div>
-
-            <div class="grupo">
-                <label>Kilometraje *</label>
-                <input type="number" placeholder="50000">
-            </div>
-        </div>
-
-        <div class="grupo">
-            <label>VIN (Opcional)</label>
-            <input type="text" placeholder="1HGBH41JXMN109186">
-            <small>Número de identificación del vehículo – 17 caracteres</small>
-        </div>
-
-        <hr>
-
-        <div class="botones">
-            <button class="guardar">Guardar vehículo</button>
-            <button class="limpiar">Limpiar</button>
-        </div>
-
+      <div class="box">
+        <h2>Seguridad</h2>
+        <p>Se verifica que todo esté correcto antes de mostrar el mensaje final y permitir el acceso.</p>
+      </div>
     </div>
+
+    <div class="botones">
+      <button class="btn-registro" onclick="mostrarMensaje('✅ Registro completado con éxito. ¡Bienvenido a Saturno!')">
+        📝 Confirmación de Registro
+      </button>
+
+      <button class="btn-usuario" onclick="mostrarMensaje('👤 Usuario nuevo detectado.')">
+        👤 Usuario Nuevo
+      </button>
+
+      <button class="btn-confirmacion" onclick="mostrarMensaje('📩 Verificación lista.')">
+        📩 Ver Confirmación
+      </button>
+
+      <button class="btn-seguridad" onclick="mostrarMensaje('🛡️ Seguridad aprobada.')">
+        🛡️ Seguridad
+      </button>
+
+      <button class="btn-mensaje" onclick="mostrarMensaje(' 👌 Mensaje Exitoso')">
+        👌 Mensaje Exitoso
+      </button>
+
+      <button class="btn-redireccion" onclick="redirigir()">
+        🚀 Ícono y Redirección
+      </button>
+    </div>
+
+    <div class="resultado" id="resultado">
+      Aquí aparecerá el mensaje
+    </div>
+
+    <div class="nota">
+      Haz clic en cualquier botón para ver el mensaje. El último botón no funcional
+    </div>
+  </div>
+
+  <script>
+    function mostrarMensaje(texto) {
+      document.getElementById("resultado").innerText = texto;
+    }
+
+  </script>
 
 </body>
 </html>
